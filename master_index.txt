@@ -1,0 +1,72 @@
+=====
+Numpy
+=====
+
+## Section 1: Numpy Basics
+
+import numpy as np
+
+np.array() -> Create Array
+np.arange(#,#) or np.arange(#,#,#) -> evenly spaced values within a given interval
+np.zeros(#) or np.zeros((#,#)) -> zeros matrix
+np.ones(#) or np.ones((#,#)) -> ones matrix
+np.linspace(0,10,50) -> Return evenly spaced numbers over a specified interval
+np.eye(4) -> identiy matrix
+np.random.rand(2) or np.random.rand(2,2) -> random samples from uniform distribution
+np.random.randn(2) or np.random.randn(3,4) -> random samples from standard normal distribution
+np.randint(1,100) or np.randint(1,100,10) -> random ints from low bound to high bound
+
+arr = np.arange(25)
+
+arr.reshape(5,5) -> reshape contents of array
+arr.max() -> max element of array
+arr.argmax() -> find the index of the max value
+arr.min() -> min element of array
+arr.argmin() -> index of min element
+arr.shape  -> dimensions of the array
+arr.dtype -> datatype of array
+
+== ==
+== ==
+
+## Section 2: Numpy selection and indexing
+
+arr = np.arange(25)
+
+arr[8] or arr[1:5] or arr[:] or arr [:5] or arr[2:] -> Get element(s) from array
+arr[0:5]=100 -> broadcasting: assign the values of an array. Changes array, does not create copy
+arr.copy() -> copy array
+
+arr_2d = np.array(([5,10,15],[20,25,30],[35,40,45]))
+
+arr2d[1][0] -> index for 2d array
+arr2d[:2][1:] -> slice of 2d array
+arr_length = arr2d.shape[1] -> length of array (1st dimension -> length)
+selected_arr = arr>4 -> will return true/false array where elements of arr are greater than 4
+arr[arr>x] -> returns elements of arr that are greater than x
+
+== ==
+== ==
+
+# Section 3: Numpy Operations
+
+arr + arr -> add the elements of the arrays
+arr - arr -> subtract the elements of the arrays
+arr * arr -> multiply the elements of the arrays
+arr / arr -> divide the elements of the arrays
+arr**3 -> raise each element in the array to the 3rd power
+
+np.sqrt(arr) -> square root of each element in the array
+np.exp(arr) -> calculate the exponential (e^)
+np.max(arr) -> max element of array. same as arr.max()
+np.sin(arr) -> sine of each element
+np.log(arr) -> log base-10 for each element
+
+== ==
+== ==
+
+# Extra stuff
+
+Amazing resource on reshaping and concatenating arrays: https://docs.scipy.org/doc/numpy-1.14.0/reference/routines.array-manipulation.html
+
+
